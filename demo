@@ -1,0 +1,15 @@
+public class StaticInnerClassDemo1{
+int a=10;
+static int b=20;
+static class Inner{
+void displayStaticMembers(){
+//System.out.println("a="+a); error for static class/method not allow the non-static member access
+System.out.println("b="+b);
+}
+}
+public static void main(String[] args)
+{
+StaticInnerClassDemo1.Inner inner1=new StaticInnerClassDemo1.Inner();
+inner1.displayStaticMembers();
+}
+}
