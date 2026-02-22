@@ -1,0 +1,28 @@
+class Bank {
+
+    static String bankName = "SBI";
+    static String branch = "Hyderabad";
+
+    // Static Inner Class
+    static class Account {
+        int accNo;
+        String holderName;
+
+        void display() {
+            System.out.println("Bank Name: " + bankName);
+            System.out.println("Branch: " + branch);
+            System.out.println("Account No: " + accNo);
+            System.out.println("Holder Name: " + holderName);
+        }
+    }
+}
+public class StaticInnerClassDemo2{
+    public static void main(String[] args) {
+
+        Bank.Account acc = new Bank.Account();
+        acc.accNo = 123456;
+        acc.holderName = "Srinu";
+
+        acc.display();
+    }
+}
